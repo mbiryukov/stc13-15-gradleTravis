@@ -28,4 +28,4 @@ cache:
 
 install:
 - gradle assemble
-- gradle check --gradle-version 4.10
+- gradle check
