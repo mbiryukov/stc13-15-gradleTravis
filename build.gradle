@@ -13,7 +13,7 @@ repositories {
 }
 
 test {
-    //useJUnitPlatform()
+    useJUnitPlatform()
     afterSuite { desc, result ->
         if (!desc.parent)
             println("${result.resultType} " +
