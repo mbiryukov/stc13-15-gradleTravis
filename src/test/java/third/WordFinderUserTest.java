@@ -15,6 +15,7 @@ public class WordFinderUserTest {
     final static String FIRST_SENTENCE = "Один";
     final static String SECOND_SENTENCE = "Два";
     final static String THIRD_SENTENCE = "Три";
+    final static String SOME_FILE = "file://some";
 
     private WordFinderUser wordFinderUser;
     private WordFinder wordFinder = Mockito.mock(WordFinder.class);
@@ -28,7 +29,7 @@ public class WordFinderUserTest {
     void wordFinderEmptyList() {
         when(wordFinder.getSentences(any())).thenReturn(new HashSet<>());
         try {
-            wordFinderUser.doWork("file://some", "word");
+            wordFinderUser.doWork(SOME_FILE, "word");
         } catch (MalformedURLException e) {
             e.printStackTrace();
         }
@@ -45,7 +46,7 @@ public class WordFinderUserTest {
         ));
         when(wordFinder.checkIfWordInSentence(any(), any())).thenReturn(true);
         try {
-            wordFinderUser.doWork("file://some", "word");
+            wordFinderUser.doWork(SOME_FILE, "word");
         } catch (MalformedURLException e) {
             e.printStackTrace();
         }
@@ -62,7 +63,7 @@ public class WordFinderUserTest {
         ));
         when(wordFinder.checkIfWordInSentence(any(), any())).thenReturn(false);
         try {
-            wordFinderUser.doWork("file://some", "word");
+            wordFinderUser.doWork(SOME_FILE, "word");
         } catch (MalformedURLException e) {
             e.printStackTrace();
         }
