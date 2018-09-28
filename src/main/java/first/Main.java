@@ -1,3 +1,5 @@
+package first;
+
 import third.WordFinderImpl;
 import third.WordFinderUser;
 

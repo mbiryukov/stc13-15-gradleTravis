@@ -2,7 +2,7 @@ package third;
 
 import java.net.MalformedURLException;
 import java.net.URL;
-import java.util.HashSet;
+import java.util.Set;
 
 public class WordFinderUser {
     WordFinder wordFinder;
@@ -12,7 +12,7 @@ public class WordFinderUser {
     }
 
     public void doWork(String resource, String word) throws MalformedURLException {
-        HashSet<String> sentences = wordFinder.getSentences(new URL(resource));
+        Set<String> sentences = wordFinder.getSentences(new URL(resource));
         for (String sentence : sentences) {
             if (wordFinder.checkIfWordInSentence(sentence, word)) {
                 wordFinder.writeSentenceToResult(sentence);
