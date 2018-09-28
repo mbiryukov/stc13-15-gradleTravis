@@ -14,14 +14,18 @@ branches:
   only:
   - develop
 
+script:
+- ./gradlew build --scan -s
+
 before_cache:
 - rm -f  $HOME/.gradle/caches/modules-2/modules-2.lock
 - rm -fr $HOME/.gradle/caches/*/plugin-resolution/
+
 cache:
   directories:
   - $HOME/.gradle/caches/
   - $HOME/.gradle/wrapper/
 
-install:
-- gradle assemble
-- gradle check
+#install:
+#- gradle assemble
+#- gradle check
