@@ -32,7 +32,7 @@ public class WordFinderUserTest {
         } catch (MalformedURLException e) {
             e.printStackTrace();
         }
-        verify(wordFinder, times(0))
+        verify(wordFinder, times(1))
                 .checkIfWordInSentence(any(), any());
         verify(wordFinder, times(0))
                 .writeSentenceToResult(any());
