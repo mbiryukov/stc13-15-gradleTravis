@@ -28,4 +28,4 @@ cache:
 
 install:
 - ./gradlew assemble
-- ./gradlew check
+- ./gradlew check --rerun-tasks
