@@ -14,8 +14,8 @@ branches:
   only:
   - develop
 
-script:
-- ./gradlew build --scan -s
+#script:
+#- ./gradlew build --scan -s
 
 before_cache:
 - rm -f  $HOME/.gradle/caches/modules-2/modules-2.lock
@@ -26,6 +26,6 @@ cache:
   - $HOME/.gradle/caches/
   - $HOME/.gradle/wrapper/
 
-#install:
-#- gradle assemble
-#- gradle check
+install:
+- gradle assemble
+- gradle check --gradle-version 4.10
