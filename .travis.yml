@@ -13,6 +13,7 @@ os:
 branches:
   only:
   - develop
+  -/^feature-.*$/
 
 #script:
 #- ./gradlew build --scan -s
