@@ -13,5 +13,6 @@ public class Main {
         } catch (MalformedURLException e) {
             e.printStackTrace();
         }
+        System.out.println("Something is changed");
     }
 }
